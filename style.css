@@ -9,33 +9,33 @@ body {
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 .header img {
   width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  border: 5px solid black;
+  height: 250px;
+  display: block;
+  max-width: 100%;
+  border: 5px solid rgb(0, 0, 0);
 }
 
 #res {
   background-color: rgb(234, 234, 234);
-  font-size: 22px;
-  padding: 10px;
+  font-size: 26px;
+  padding: 12px;
+  margin-top: 10px;
 }
 
 .choices {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 30px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .choices img {
   border-radius: 50%;
-  height: 90px;
-  width: 90px;
-  border: 6px solid white;
+  height: 110px;
+  width: 110px;
+  border: 8px solid white;
   transition: 0.2s;
 }
 
@@ -58,9 +58,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
-  margin-top: 30px;
-  flex-wrap: nowrap;
+  gap: 150px;
+  margin-top: 40px;
 }
 
 .container3 div {
@@ -69,34 +68,32 @@ body {
 
 .container3 img {
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
-  border: 5px solid white;
+  height: 100px;
+  width: 100px;
+  border: 6px solid white;
 }
 
 .papa {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 150px;
   margin-top: 10px;
+  font-size: 20px;
 }
 
 .footer {
   background-color: black;
   color: white;
-  padding: 15px;
-  margin-top: 40px;
+  padding: 20px;
+  margin-top: 60px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   text-align: left;
-  gap: 5px;
 }
 
 @media (max-width: 600px) {
-  .header img {
-    max-height: 180px;
+  .choices {
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   .choices img {
@@ -105,20 +102,20 @@ body {
   }
 
   .container3 {
-    gap: 20px;
+    gap: 30px;
   }
 
   .container3 img {
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
+  }
+
+  .papa {
+    gap: 30px;
+    font-size: 16px;
   }
 
   #res {
     font-size: 18px;
-  }
-
-  .papa {
-    flex-direction: row;
-    gap: 20px;
   }
 }
