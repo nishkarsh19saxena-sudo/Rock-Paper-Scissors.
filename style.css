@@ -1,143 +1,124 @@
-.header img {
-    width: 100%;
-    height: 275px;
-    border: 10px solid rgb(0, 0, 0);
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 body {
-   background-color: rgb(255, 244, 79);
-   justify-content: center;
-  
+  background-color: rgb(255, 244, 79);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#res{
-    background-color: rgb(234, 234, 234);
-   font-size: 30px;
-   font-style: italic;
-   text-align: center; 
+.header img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border: 5px solid black;
 }
-.footer{
-    background-color: rgb(0, 0, 0);
- display:block;
- color: rgb(255, 255, 255);
- margin-top: 350px;
- padding-bottom: 10px;
- /* margin-left: 0px;
- margin-right: 0px; */
- /* border: 5px solid rgba(255, 255, 255, 0.188); */
- border-radius: 10px;
 
-  
+#res {
+  background-color: rgb(234, 234, 234);
+  font-size: 22px;
+  padding: 10px;
 }
+
 .choices {
-    display: flex;
-    justify-content: center;
- 
-    margin-top: 50px;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
 }
-.choices img{
-   
-    border-radius: 100%;
-    height: 100px;
-    width: 100px;
-    margin: 5px;
-    padding: 5px;
-    border: 10px solid rgb(255, 255, 255);
 
+.choices img {
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  border: 6px solid white;
+  transition: 0.2s;
 }
-#s img:hover{
-    opacity: 0.5; 
-    border-color: lightblue;
-        border-radius: 100%;
-        border-width: 10px;
 
+#s img:hover {
+  opacity: 0.5;
+  border-color: lightblue;
 }
-#r img:hover{
-    opacity: 0.5; 
-     border-radius: 100%;
-    border-width: 10px;
-    border-color: rgb(219, 103, 118);
-    border-style: solid;
-}
-#p img:hover{
-    opacity: 0.5; 
-     border-radius: 100%;
-    border-width: 10px;
-    border-color: rgba(255, 255, 0, 0.691);
-}
-.score{
-    color:white;
-}
-.container{
-    display: inline-block;
-    /* justify-content: center;
-    align-items: center; */
-    /* background-color: rgb(255, 255, 255); */
-    /* gap: 3px;
-    border-radius: 10px; */
-    /* border: 10px solid rgba(0, 0, 0); */
-    font-size: 30px;
-    /* width: 400px;
-    height: 90px;*/ 
-      font-family:Georgia, 'Times New Roman', Times, serif;
-   margin-left: 150px; 
 
+#r img:hover {
+  opacity: 0.5;
+  border-color: rgb(219, 103, 118);
 }
-#cs{
-    align-self: center;
-margin-left:65px ;
-}
-#ys{
-    align-self: center;
-margin-left: 25px;
-}
-.container2{
-     display: inline-block;
-     font-family:Georgia, 'Times New Roman', Times, serif;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* gap: 1px; */
-     /* border-radius: 10px; */
-    /* border: 10px solid rgba(0, 0, 0); */
-    /* background-color: rgb(255, 255, 255); */
-    font-size: 30px;
-    /* width: 400px; */
-    /* margin-top: 10px; */
-    /* height: 90px; */
- margin-left: 175px;
 
+#p img:hover {
+  opacity: 0.5;
+  border-color: rgba(255, 255, 0, 0.7);
 }
-.container3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-}
-.container3 img{
-    display: flex;
-     border-radius: 100%;
-    height: 100px;
-    width: 100px;
-    
-    padding: 5px;
-    border: 10px solid rgb(255, 255, 255);
-    
-    gap:150px;
-    
 
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 30px;
+  flex-wrap: nowrap;
 }
-#yor{
-    margin-left: 1px;
+
+.container3 div {
+  text-align: center;
 }
-#com2{
-    margin-left: 1000px;
+
+.container3 img {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  border: 5px solid white;
 }
-.papa{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+
+.papa {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 5px;
+}
+
+@media (max-width: 600px) {
+  .header img {
+    max-height: 180px;
+  }
+
+  .choices img {
+    height: 70px;
+    width: 70px;
+  }
+
+  .container3 {
+    gap: 20px;
+  }
+
+  .container3 img {
+    height: 60px;
+    width: 60px;
+  }
+
+  #res {
+    font-size: 18px;
+  }
+
+  .papa {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
